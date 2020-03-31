@@ -1,7 +1,7 @@
 <div>
     <div style="display: flex;flex-direction: row;">
-        <img src="https://images.assetsdelivery.com/compings_v2/putracetol/putracetol1805/putracetol180503254.jpg" alt="" width=100 height=100>
-        <h2>GameShop</h2>
+        <img src="https://via.placeholder.com/100" routerLink="/landing" alt="">
+        <h2>Sklep z softłerem</h2>
     </div>
 
     <button routerLink="/adm_dashboard">Panel Administratora</button>
@@ -10,9 +10,9 @@
         <input type="text" [(ngModel)]="this.mainService.productsRequest.name">
         <button (click)="this.mainService.getProducts(this.mainService.productsRequest)" routerLink="/products">Szukaj Produktu</button>
     </div>
-</div>
-<div>
-  <button id="cartBtn" routerLink="/cart">
-      {{getCartQuanity()}}
-  </button>
+    <div>
+        <button id="cartBtn" routerLink="/cart">
+            {{getCartQuanity()}}
+        </button>
+    </div>
 </div>
