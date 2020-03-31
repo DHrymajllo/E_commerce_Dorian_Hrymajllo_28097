@@ -8,3 +8,8 @@
         <button (click)="this.mainService.getProducts(this.mainService.productsRequest)" routerLink="/products">Szukaj Produktu</button>
     </div>
 </div>
+<div>
+  <button id="cartBtn" routerLink="/cart">
+      {{getCartQuanity()}}
+  </button>
+</div>
