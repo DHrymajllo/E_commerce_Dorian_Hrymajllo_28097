@@ -2,16 +2,17 @@
 <div class="products">
  <table style="margin:0 auto;" id="cartTable">
  <thead *ngIf="this.mainService.products">
- <tr>
- <th>obrazek</th>
- <th>dane</th>
- </tr>
+  <tr>
+    <th>obrazek</th>
+    <th>dane</th>
+    </tr>
  </thead>
  <tbody>
  <ng-container *ngFor="let object of this.mainService.cart">
  <tr style="background-color: whitesmoke;">
  <td><img src="{{object.product.thumbnail}}" alt=""></td>
  <td>
+ <img class="center" src="https://i.imgur.com/Pz1em06.png">
  <ul>
  <li>Tytuł: {{object.product.title}}</li>
  <li>Cena: {{object.product.price}}</li>
@@ -23,6 +24,7 @@
  </tbody>
  </table>
  <div class="summary">
+
  <p align="center">Do zapłaty: {{getCartPrice()}}</p>
  </div>
  <div class="payment">
