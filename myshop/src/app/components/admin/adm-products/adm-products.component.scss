@@ -1,13 +1,25 @@
-#productsTable{
-  img{
-    width:180px;
+img{
+  width:180px;
+}
+td{
+  padding:20px;
   }
-  td{
-    padding:20px;
-    }
-    div{
-      background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/273770/c589dcdecf74ef61f207bcc3d6dac52273d96973.jpg');
-      background-attachment: fixed;
-    }
-  }
+div {
+  background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/273770/c589dcdecf74ef61f207bcc3d6dac52273d96973.jpg');
+  background-attachment: fixed;
+}
+p{
+  color: white;
+}
 
+h2{
+  color: white
+}
+th{
+  color: white
+}
+img.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
