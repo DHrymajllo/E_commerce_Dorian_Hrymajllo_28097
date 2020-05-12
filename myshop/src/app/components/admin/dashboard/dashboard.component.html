@@ -1,9 +1,16 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div style="display: flex;flex-direction: row;">
   <app-menu></app-menu>
   <div class="content" style="width: 100%;">
   <div class="content-header">
-  <h2>DASHBOARD</h2>
+  <h2>Dashboard</h2>
   </div>
+  <button mat-button mat-raised-button color="primary"
+  (click)="getOrders()">Odśwież</button>
   <div style="width: 60%;">
     <div style="display: block">
     <canvas baseChart
@@ -15,12 +22,10 @@
     [chartType]="barChartType">
     </canvas>
     </div>
-    <button mat-button mat-raised-button color="primary"
-    (click)="randomize()">Update</button>
     </div>
   <div class="content-container">
   <h2>Zamówienia</h2>
-  <table>
+  <table style="background-color: rgb(86, 90, 95); width: 500px; height: 150px;" border="1" cellspacing="5">
     <thead>
       <tr>
         <th>ID</th>
@@ -29,19 +34,22 @@
         <th>Email</th>
         <th>Telefon</th>
         <th>Cena</th>
+        <th>Data</th>
       </tr>
     </thead>
     <tbody>
-      <tr *NgFor="let order of this.mainService.orders?.orders">
+      <tr *ngFor="let order of this.mainService.orders?.orders">
         <td>{{order.id}}</td>
         <td>{{order.first_name}}</td>
         <td>{{order.last_name}}</td>
         <td>{{order.email}}</td>
         <td>{{order.phone}}</td>
         <td>{{order.price}}</td>
+        <td>{{order.date_end}}</td>
       </tr>
     </tbody>
   </table>
+  <p>&nbsp;</p>
   </div>
   </div>
  </div>

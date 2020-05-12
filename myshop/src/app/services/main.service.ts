@@ -94,6 +94,8 @@ export class MainService {
     console.log('Coś poszło nie tak podczas usuwania produktu!');
     });
     }
+
+
     orders = null;
     getOrders() {
     const s = new Promise((resolve, reject) => {
@@ -117,6 +119,7 @@ export class MainService {
     s.then((onmessage: any) => {
     console.log('Pomyślnie pobrano zamówienia!');
     this.orders = onmessage;
+    console.log(this.orders);
     }).catch((onmessage) => {
     console.log('Coś poszło nie tak podczas pobierania zamówień!');
     });

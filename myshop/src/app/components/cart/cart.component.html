@@ -1,4 +1,10 @@
 <app-panel-top></app-panel-top>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<button class="myButton" routerLink="/landing">Powrót</button>
 <div class="products">
  <table style="margin:0 auto;" id="cartTable">
  <thead *ngIf="this.mainService.products">
@@ -23,10 +29,6 @@
  </ng-container>
  </tbody>
  </table>
- <div class="summary">
-
- <p align="center">Do zapłaty: {{getCartPrice()}}</p>
- </div>
  <div class="payment">
  <div id="paypal">
  </div>
@@ -38,10 +40,15 @@
  <ng-container *ngFor="let object of this.mainService.cart">
  <input type="hidden" name="products[]" value="{{ object | json }}">
  </ng-container>
- <p align="center"><label for="">Akceptuję regulamin:
+ <div class="summary">
+  <p align="center" class="kolor">Do zapłaty: {{getCartPrice()}}</p>
+  </div>
+ <p align="center" class="kolor2"><label for="">Akceptuję regulamin:
  <input #regulamin type="checkbox" name="aggrement" id="" (change)="0">
  </label>
- <p align="center"><button [disabled]="!regulamin.checked" (click)="paymentForm.submit()">Kup</button>
+ <p align="center"><button [disabled]="!regulamin.checked" (click)="paymentForm.submit()">
+  <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" width="1%">Kup</button>
+  <p>&nbsp;</p>
  </form>
  </div>
 </div>

@@ -1,8 +1,13 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div style="display: flex;flex-direction: row;">
   <app-menu></app-menu>
   <div class="content" style="width: 100%;">
   <div class="content-header">
-  <h2>Products</h2>
+  <h2>Produkty</h2>
   </div>
   <button (click)="getProducts()">Odśwież</button>
   <div class="content-container">
@@ -53,12 +58,13 @@
       </ul>
       </td>
       <td>
-      <button (click)="this.mainService.removeProduct(product.id)">Usuń</button>
+      <button class="myButton" (click)="this.mainService.removeProduct(product.id)">Usuń</button>
       </td>
       </tr>
       </ng-container>
       </tbody>
       </table>
+      <p>&nbsp;</p>
   </div>
   </div>
  </div>
