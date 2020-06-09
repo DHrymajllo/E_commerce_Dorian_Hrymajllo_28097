@@ -1,14 +1,17 @@
 img{
-  width:180px;
+  width:30%;
+    min-width: 100px;
 }
 
 td{
-  padding:20px;
+  padding:1%px;
   }
 
 div {
   background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/273770/c589dcdecf74ef61f207bcc3d6dac52273d96973.jpg');
   background-attachment: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 p{
@@ -23,6 +26,7 @@ img.center{
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 100px;
 }
 
 .kolor{
@@ -39,13 +43,11 @@ li{
   font-size: 20px;
   letter-spacing: 2px;
   word-spacing: 2px;
-  color: Green;
   font-weight: normal;
   text-decoration: none;
   font-style: normal;
   font-variant: normal;
   text-transform: none;
-  text-shadow: 2px 2px coral;
 }
 
 button {
@@ -99,4 +101,8 @@ button:active {
 .myButton:active {
 	position:relative;
 	top:1px;
+}
+#cartTable{
+  margin:0 auto;
+  text-align: center;
 }

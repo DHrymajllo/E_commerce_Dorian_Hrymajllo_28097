@@ -1,10 +1,11 @@
 #productsTable{
 img{
-  width:180px;
+  width:30%;
+  min-width: 100px;
 }
 
 td{
-  padding:20px;
+  padding:1%;
   }
 }
 
@@ -15,11 +16,12 @@ th{
 div {
   background-image: url('https://steamcdn-a.akamaihd.net/steamcommunity/public/images/items/273770/c589dcdecf74ef61f207bcc3d6dac52273d96973.jpg');
   background-attachment: fixed;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 li{
   font-family: Impact, Charcoal, sans-serif;
-  font-size: 20px;
   letter-spacing: 2px;
   word-spacing: 2px;
   color: Green;
@@ -82,4 +84,9 @@ button:active {
 .myButton:active {
 	position:relative;
 	top:1px;
+}
+#productsTable{
+  width: 50%;
+  margin:0 auto;
+  text-align: center;
 }
